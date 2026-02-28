@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Navbar from "./navbar";
-import Footer from "./footer";
+import Navbar from "@/app/navbar";
+import Footer from "@/app/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Home | Chuks Kitchen",
+  title: "Explore | Chuks Kitchen",
   description:
     "Chuks Kitchen: Elevating your dining experience. Explore a curated menu of chef-crafted delicacies made with the finest ingredients. Quality you can taste, service you can trust.",
 };
@@ -30,9 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   );
