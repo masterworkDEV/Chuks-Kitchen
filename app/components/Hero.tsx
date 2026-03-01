@@ -9,6 +9,7 @@ const styles = {
 const Hero = () => {
   return (
     <section
+      id="home"
       className="h-screen
   pt-20   max-sm:pt-0 relative"
     >
@@ -49,7 +50,7 @@ const Hero = () => {
         </p>
 
         <Link
-          href="/"
+          href="/explore"
           className="text-white bg-orange  px-10 py-6
             max-lg:px-8 max-lg:py-5  max-sm:px-6 max-sm:py-6 font-semibold rounded-2xl"
         >

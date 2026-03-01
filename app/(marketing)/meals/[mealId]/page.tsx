@@ -47,12 +47,10 @@ const MealDetails = async ({ params }: Props) => {
   return (
     <main
       className="h-screen w-full flex gap-10
-    
-           pr-14 max-lg:pr-10 max-md:pr-7 max-sm:pr-5
-
-    "
+           pr-14 max-lg:pr-10 max-md:pr-7  max-sm:gap-0
+           max-sm:flex-col max-sm:pr-0 "
     >
-      <section className="h-full w-full pb-4">
+      <section className="h-full w-full pb-4 max-sm:pb-0 max-sm:h-2/4">
         <Image
           src={meal.image}
           alt={meal.name}
@@ -61,16 +59,14 @@ const MealDetails = async ({ params }: Props) => {
       </section>
 
       <section
-        className="w-full mt-24 mb-4 bg-white rounded shadow-sm
-      
-pt-10      px-4
+        className="w-full mt-24 mb-4 bg-white rounded shadow-sm pt-10 px-4  max-sm:pt-7 max-sm:mt-0
       "
       >
-        <h1 className="text-2xl font-bold mb-3">{meal.name}</h1>
+        <h1 className="text-2xl font-bold max-sm:text-xl mb-3">{meal.name}</h1>
         <h2 className="text-xl text-orange font-semibold">
           ₦{meal.price.toLocaleString()}
         </h2>
-        <p className="mt-4 text-gray-600">{meal.description}</p>
+        <p className="mt-4 text-text font-normal">{meal.description}</p>
       </section>
     </main>
   );

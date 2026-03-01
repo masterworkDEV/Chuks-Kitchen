@@ -35,7 +35,7 @@ const NewMenu = () => {
           </p>
 
           <Link
-            href="/"
+            href="/explore"
             className="text-white bg-orange  px-10 py-5 max-lg:py-5 max-sm:py-4 font-semibold rounded-2xl"
           >
             Discover what's new

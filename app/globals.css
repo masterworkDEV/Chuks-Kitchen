@@ -1,6 +1,4 @@
-/* available fonts  */
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap");
 
 @import "tailwindcss";
 
@@ -10,26 +8,26 @@
   --orange: #ff7a18;
   --text-secondary: #fff;
   --text-text: #333;
+  --text-pink: #fafafa;
+  --font-ubuntu: "Ubuntu Sans", sans-serif;
 }
+
 @theme inline {
   --color-primary: var(--bg-primary);
   --color-dark: var(--bg-dark);
   --color-orange: var(--orange);
-  --font-primary: var(--font-primary);
 
-  /* custom card dimension */
-
+  /* Map the Tailwind font utility to your variable */
+  --font-sans: var(--font-ubuntu);
   --spacing-card-h: 300px;
 }
-/* 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-primary: #ffffff;
-    --bg-dark: #28282b;
-  }
-} */
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: var(--bg-primary);
   color: var(--text-text);
+  font-family: var(--font-ubuntu);
+  font-weight: 400;
 }
