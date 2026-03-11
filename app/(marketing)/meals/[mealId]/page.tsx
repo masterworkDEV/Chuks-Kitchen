@@ -46,11 +46,11 @@ const MealDetails = async ({ params }: Props) => {
 
   return (
     <main
-      className="h-screen w-full flex gap-10
+      className="min-h-screen w-full flex gap-10
            pr-14 max-lg:pr-10 max-md:pr-7  max-sm:gap-0
            max-sm:flex-col max-sm:pr-0 "
     >
-      <section className="h-full w-full pb-4 max-sm:pb-0 max-sm:h-2/4">
+      <section className="mt-20 max-sm:mt-10 h-screen w-full pb-4 max-sm:pb-0 max-sm:h-2/4">
         <Image
           src={meal.image}
           alt={meal.name}
@@ -66,7 +66,65 @@ const MealDetails = async ({ params }: Props) => {
         <h2 className="text-xl text-orange font-semibold">
           ₦{meal.price.toLocaleString()}
         </h2>
-        <p className="mt-4 text-text font-normal">{meal.description}</p>
+        <p className="my-5 text-text font-normal">{meal.description}</p>
+
+        {/* food type  */}
+        <div className=" flex justify-between items-center">
+          <small>Mid spicy</small>
+          <small>Vegetarian option available</small>
+          <a className="text-blue-500 text-sm" href="/">
+            View Allegies
+          </a>
+        </div>
+        {/* Pick your food type  */}
+
+        <div className="my-7">
+          <h2 className="text-xl text-black mb-4">Choose Your Protein</h2>
+          <div>
+            <div className="border-2 border-gray-200 rounded-md  p-2 flex items-center gap-2 mb-5">
+              {/* icon */}
+              <div className="border-4 border-orange w-6 h-6 rounded-full"></div>
+              <p>Chicken</p>
+            </div>
+            <div className="border-2 border-gray-200 rounded-md  p-2 flex items-center gap-2">
+              {/* icon */}
+              <div className="border-4 border-orange w-6 h-6 rounded-full"></div>
+              <p>Beef</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Extra sides (optional)  */}
+
+        <div className="my-7">
+          <h2 className="text-xl text-black mb-4">Extra Sides (Optional)</h2>
+          <div>
+            <div className="border-2 border-gray-200 rounded-md  p-2 flex items-center gap-2 mb-5">
+              {/* icon */}
+              <div className="border-2 border-gray-200 w-6 h-6 rounded-lg"></div>
+              <p>Fried Plantain</p>
+            </div>
+            <div className="border-2 border-gray-200 rounded-md  p-2 flex items-center gap-2">
+              {/* icon */}
+              <div className="border-2 border-gray-200 w-6 h-6 rounded-lg"></div>
+              <p>Coleslaw</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Extra sides (optional)  */}
+
+        <div className="mt-7 mb-2">
+          <h2 className="text-xl text-black mb-4">Extra Sides (Optional)</h2>
+          <div>
+            <textarea
+              rows={4}
+              name="message"
+              className="p-2 border-2 border-gray-200 w-full rounded"
+              placeholder="Add your message"
+            ></textarea>
+          </div>
+        </div>
       </section>
     </main>
   );

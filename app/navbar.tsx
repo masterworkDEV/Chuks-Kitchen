@@ -24,12 +24,12 @@ const Navbar: NextPage<Props> = ({}) => {
 
   return (
     <header className="flex bg-white px-14 max-lg:px-10 max-md:px-7 max-sm:px-5 py-5 max-sm:py-2.5 justify-between items-center shadow fixed right-0 left-0 top-0 z-30">
-      <div className="flex justify-center items-center gap-20  max-lg:gap-20">
+      <div className="flex justify-center items-center gap-20  max-xl:gap-10">
         <a href="/">
           <Image
             src={logoImage}
             alt="Chuk's Kitchen"
-            className="max-sm:h-6 "
+            className="max-lg:h-6 w-full"
             priority
           />
         </a>
@@ -46,15 +46,13 @@ const Navbar: NextPage<Props> = ({}) => {
                 <Link
                   href={link.href}
                   style={{
-                    display: "inline-block",
-                    marginInline: "40px",
                     fontSize: "15px",
                     fontWeight: "thick",
                   }}
                   className={
                     isActive
-                      ? "    text-orange  font-semibold"
-                      : `   font-semibold  text-text  text-center    `
+                      ? "    text-orange  font-semibold mx-10 max-lg:mx-5"
+                      : `   font-semibold  text-text  text-center   mx-10 max-lg:mx-5 `
                   }
                   key={link.name}
                 >
@@ -69,7 +67,7 @@ const Navbar: NextPage<Props> = ({}) => {
       <div className=" flex gap-6 max-md:hidden">
         <Link
           href="/login"
-          className="bg-orange text-white text-sm font-semibold  px-12 py-3 rounded-lg"
+          className="bg-orange text-white text-sm font-semibold  px-12 py-3   max-lg:px-10 rounded-lg"
         >
           Login
         </Link>
@@ -130,6 +128,7 @@ const Navbar: NextPage<Props> = ({}) => {
 
             return (
               <Link
+                onClick={toggleMenu}
                 key={link.name}
                 href={link.href}
                 className={

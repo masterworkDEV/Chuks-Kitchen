@@ -1,7 +1,7 @@
-import Hero from "./components/Hero";
-import Categories from "./components/Categories";
-import ChefSpecial from "./components/ChefSpecial";
-import NewMenu from "./components/NewMenu";
+import Hero from "./sections/Hero";
+import Categories from "./sections/Categories";
+import ChefSpecial from "./sections/ChefSpecial";
+import NewMenu from "./sections/NewMenu";
 
 export default function Home() {
   return (
