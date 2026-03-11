@@ -4,7 +4,7 @@ import Link from "next/link";
 
 interface Props {
   id: number;
-  image: StaticImageData;
+  image: string;
   name: string;
   title: string;
   description: string;
@@ -23,7 +23,7 @@ const MealCard: NextPage<Props> = ({
     <div className="border-2 border-white  bg-white  rounded-2xl h-96" key={id}>
       <Link href={`/meals/${id}`} className="block h-2/4 rounded-t-2xl mb-3">
         <Image
-          src={image.src}
+          src={image}
           alt={name}
           className=" rounded-t-2xl h-full w-full"
         />

@@ -181,7 +181,7 @@ const explore = () => {
               )
               .map((food) => (
                 <MealCard
-                  image={food.image.src}
+                  image={food.image}
                   id={food.id}
                   name={food.name}
                   description={food.description}

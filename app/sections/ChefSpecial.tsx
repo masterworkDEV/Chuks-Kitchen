@@ -24,8 +24,8 @@ const ChefSpecial = () => {
           foodData
             .map((food) => (
               <MealCard
-                image={food.image.src}
                 id={food.id}
+                image={food.image}
                 name={food.name}
                 description={food.description}
                 price={food.price}
