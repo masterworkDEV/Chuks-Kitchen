@@ -85,6 +85,7 @@ const explore = () => {
                     name={food.name}
                     description={food.description}
                     price={food.price}
+                    title={food.title}
                   />
                 ))
                 .slice(0, 6)

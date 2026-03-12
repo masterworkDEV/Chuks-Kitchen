@@ -4,7 +4,7 @@ import Link from "next/link";
 
 interface Props {
   id: number;
-  image: string;
+  image: StaticImageData | any;
   name: string;
   title: string;
   description: string;
