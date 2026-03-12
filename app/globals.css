@@ -3,7 +3,7 @@
 @import "tailwindcss";
 
 :root {
-  --bg-primary: #fafafa;
+  --bg-primary: #fcfcfc;
   --bg-dark: #664631;
   --orange: #ff7a18;
   --text-secondary: #fff;

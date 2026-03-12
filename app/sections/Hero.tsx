@@ -2,24 +2,21 @@ import Link from "next/link";
 import Image from "next/image";
 import heroImage from "@/public/images/heroImage.png";
 
-const styles = {
-  image: "w-full h-full  max-sm:object-cover ",
-};
-
 const Hero = () => {
   return (
     <section
       id="home"
-      className="h-screen
-  pt-20   max-sm:pt-0 relative"
+      className="h-full
+      max-sm:h-[90vh]
+  pt-20 max-sm:pt-0 relative"
     >
       {/* form to search meals */}
-      <form className="absolute right-0 left-0 bottom-[-2%] px-40  max-xl:px-24 max-lg:px-20 max-md:px-12  max-sm:px-10 z-20 ">
+      <form className="absolute right-0 left-0 bottom-[-2%] px-40  max-xl:px-24 max-lg:px-20 max-md:px-12  max-sm:px-5 z-20 ">
         <div className="w-full">
           <input
             type="text"
             className=" w-full
-        bg-white p-4  max-lg:p-3 max-sm:p-2.5 rounded-lg shadow"
+        bg-white p-4  max-lg:p-3 max-sm:p-3 rounded-lg shadow"
             placeholder="What are you craving for today ?"
           />
         </div>
@@ -29,13 +26,17 @@ const Hero = () => {
 
       <Image
         src={heroImage}
-        className={styles.image}
+        className="
+
+
+w-full h-full  max-sm:object-cover
+"
         alt="A diverse group of friends laughing and connecting together"
         priority
       />
 
       <div
-        className=" w-[60%] max-md:w-full
+        className=" w-[60%] max-lg:w-3/4 max-md:w-full
       absolute right-0 left-0 top-[50%] translate-y-[-50%] z-10 ml-10 max-md:ml-0 max-md:px-5
       "
       >
@@ -51,8 +52,11 @@ const Hero = () => {
 
         <Link
           href="/explore"
-          className="text-white bg-orange  px-10 py-6
-            max-lg:px-8 max-lg:py-5  max-sm:px-6 max-sm:py-6 font-semibold rounded-2xl"
+          className="text-white bg-orange  px-8 py-6
+            max-lg:px-5 max-lg:py-5  max-sm:px-4.5 max-sm:py-4.5 font-semibold rounded-2xl
+            
+            hover:bg-white hover:text-orange transition-all duration-300
+            "
         >
           Discover what's new
         </Link>

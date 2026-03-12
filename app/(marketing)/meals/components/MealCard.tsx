@@ -20,7 +20,10 @@ const MealCard: NextPage<Props> = ({
   title,
 }) => {
   return (
-    <div className="border-2 border-white  bg-white  rounded-2xl h-96" key={id}>
+    <div
+      className="border-2 border-white  bg-white  rounded-2xl h-96 shadow-sm"
+      key={id}
+    >
       <Link href={`/meals/${id}`} className="block h-2/4 rounded-t-2xl mb-3">
         <Image
           src={image}

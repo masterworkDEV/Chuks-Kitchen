@@ -5,7 +5,7 @@ interface Props {}
 const Page: NextPage<Props> = ({}) => {
   return (
     <main className="h-screen flex items-center justify-center">
-      <h1 className="text-black text-2xl">Login</h1>
+      <h1 className="text-black text-2xl">Coming soon</h1>
     </main>
   );
 };

@@ -59,14 +59,18 @@ const MealDetails = async ({ params }: Props) => {
       </section>
 
       <section
-        className="w-full mt-24 mb-4 bg-white rounded shadow-sm pt-10 px-4  max-sm:pt-7 max-sm:mt-0
+        className="w-full mt-24 mb-4  bg-white rounded shadow-sm pt-10 px-4  max-sm:pt-7 max-sm:mt-0
       "
       >
-        <h1 className="text-2xl font-bold max-sm:text-xl mb-3">{meal.name}</h1>
+        <h1 className="text-2xl font-bold max-sm:text-xl mb-3 max-sm:mb-2">
+          {meal.name}
+        </h1>
         <h2 className="text-xl text-orange font-semibold">
           ₦{meal.price.toLocaleString()}
         </h2>
-        <p className="my-5 text-text font-normal">{meal.description}</p>
+        <p className="my-5 max-sm:my-3 text-text font-normal max-sm:text-sm">
+          {meal.description}
+        </p>
 
         {/* food type  */}
         <div className=" flex justify-between items-center">

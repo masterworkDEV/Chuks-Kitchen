@@ -10,12 +10,13 @@ const ChefSpecial = () => {
   // default section style
 
   const style = {
-    section: "pt-24 pb-40 px-14 max-xl:px-12 max-lg:px-10 max-md:px-5  ",
+    section:
+      "pt-20 pb-40 max-sm:pb-30 px-14 max-xl:px-12 max-lg:px-10  max-md:px-5  ",
   };
 
   return (
     <section className={style.section}>
-      <h1 className="text-center mb-5 text-black text-3xl  max-sm:2xl font-bold">
+      <h1 className="text-center mb-6 text-black text-3xl  max-sm:2xl  font-extrabold">
         Chef's Specials
       </h1>
       {/* Cards */}

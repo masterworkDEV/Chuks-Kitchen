@@ -46,7 +46,7 @@ const explore = () => {
       </section>
 
       <main className="mt-10 px-14 max-lg:px-10 max-md:px-7 max-sm:px-5">
-        <section className="bg-white rounded-md p-6 max-sm:p-4">
+        <section className="bg-white rounded-md p-6 max-sm:p-4 shadow-sm">
           <h2 className="text-xl  mb-5 font-semibold">Menu Categories</h2>
 
           <ul>
@@ -54,7 +54,7 @@ const explore = () => {
               categories.map((category) => (
                 <li
                   // Since we are not filtering. We do it in a temporary way
-                  className={`text-xl max-sm:text-[1rem]  mb-3 max-sm:mb-2 ${
+                  className={`text-xl max-sm:text-[1rem]  mb-2 max-sm:mb-1 ${
                     category.includes("Popular")
                       ? " bg-[#ff781877] border-l-5 border-orange"
                       : ""
@@ -79,39 +79,13 @@ const explore = () => {
             {foodData.length ? (
               foodData
                 .map((food) => (
-                  <div
-                    className="border-2 border-white  bg-white  rounded-2xl h-96"
-                    key={food.name}
-                  >
-                    <Link
-                      href={`/meals/${food.id}`}
-                      className="block h-2/4 rounded-t-2xl mb-3"
-                    >
-                      <Image
-                        src={food.image}
-                        alt={food.name}
-                        className=" rounded-t-2xl h-full w-full"
-                      />
-                    </Link>
-                    <div className="card-bottom px-4 my-3">
-                      <h3 className="mb-2 text-text text-xl font-semibold">
-                        {food.name}
-                      </h3>
-                      <p className="mb-6 text-text ">
-                        {food.description.length < 70
-                          ? food.description
-                          : food.description.slice(0, 70).concat("...")}
-                      </p>
-                      <div className="flex justify-between">
-                        <h3 className="text-text  font-semibold text-orange ">
-                          ₦{food.price.toLocaleString()}
-                        </h3>
-                        <button className=" bg-orange px-6 py-3 rounded-lg text-white text-sm font-semibold">
-                          Add to cart
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                  <MealCard
+                    id={food.id}
+                    image={food.image}
+                    name={food.name}
+                    description={food.description}
+                    price={food.price}
+                  />
                 ))
                 .slice(0, 6)
             ) : (

@@ -11,21 +11,22 @@ interface Props {}
 const Categories = () => {
   // default section style
   const style = {
-    section: "pt-24 pb-40 px-14 max-xl:px-12 max-lg:px-10 max-md:px-5",
+    section:
+      "pt-24    pb-40  max-sm:pb-30 px-14  max-xl:px-12 max-lg:px-10 max-md:px-5",
   };
 
   return (
     <section className={style.section}>
-      <h1 className="text-center mb-5 text-black text-3xl  max-sm:2xl font-bold">
+      <h1 className="text-center mb-6 text-black text-3xl  max-sm:2xl font-extrabold">
         Popular Categories
       </h1>
       {/* Cards */}
-      <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 items-center gap-10">
+      <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 items-center gap-10 max-sm:gap-5">
         {foodData.length ? (
           foodData
             .map((food) => (
               <div
-                className="border-2 border-white  bg-white  rounded-2xl h-card-h"
+                className="border-2 border-white  bg-white  rounded-2xl h-card-h shadow-sm"
                 key={food.name}
               >
                 <Link
