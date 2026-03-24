@@ -52,10 +52,10 @@ w-full h-full  max-sm:object-cover
 
         <Link
           href="/explore"
-          className="text-white bg-orange  px-8 py-6
-            max-lg:px-5 max-lg:py-5  max-sm:px-4.5 max-sm:py-4.5 font-semibold rounded-2xl
-            
-            hover:bg-white hover:text-orange transition-all duration-300
+          className="text-white bg-orange  px-8 py-5
+            max-lg:px-5   max-sm:px-4 max-sm:py-4 font-semibold rounded-2xl
+            hover:cursor-auto
+            hover:opacity-95  transition-all duration-300
             "
         >
           Discover what's new
